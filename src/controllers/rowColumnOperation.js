@@ -2241,6 +2241,8 @@ export function rowColumnOperationInitial() {
             return;
         }
 
+        if (!method.createHookFunction('cellDeleteTextBefore',Store.luckysheet_select_save)){ return; }
+
         if (Store.luckysheet_select_save.length > 0) {
             let d = editor.deepCopyFlowData(Store.flowdata);
 
